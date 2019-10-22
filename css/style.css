@@ -1,0 +1,34 @@
+:root{
+    --yellow: yellow;
+    --orange: rgb(161, 81, 34);
+    --black: black;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 900;
+    color: var(--black);
+
+}
+body{
+    background: linear-gradient(to right, var(--orange), var(--black));
+}
+.top{
+    display: grid;
+    grid-template-areas: 
+    "party party cta1"
+    "party party cta2"
+}
+.party{
+    min-height: 450px;
+    background-image: url("../img/hlw.png");
+    background-size: cover;
+    background-position: right;
+}
+.cta1{
+    grid-area: cta1;
+}
+.cta2{
+    grid-area: cta2;
+}
