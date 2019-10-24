@@ -1,5 +1,5 @@
 :root{
-    --yellow: yellow;
+    --yellow: rgb(233, 186, 58);
     --orange: rgb(161, 81, 34);
     --black: black;
 }
@@ -13,22 +13,60 @@ html{
 }
 body{
     background: linear-gradient(to right, var(--orange), var(--black));
+    margin: 20px;
 }
 .top{
     display: grid;
     grid-template-areas: 
     "party party cta1"
-    "party party cta2"
+    "party party cta2";
+    gap: 20px;
+
 }
 .party{
+    grid-area: party;
     min-height: 450px;
     background-image: url("../img/hlw.png");
     background-size: cover;
-    background-position: right;
+    background-position: center right;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    
+}
+.party > *{
+    background: var(--yellow);
+    padding: 10px;
+}
+.cta{
+    background: var(--yellow);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.cta p{
+    margin: 0;
 }
 .cta1{
     grid-area: cta1;
 }
 .cta2{
     grid-area: cta2;
+}
+@media(max-width: 1000px){
+    .top{
+        grid-template-areas: 
+        "party party"
+        "cta1 cta2";
+    }
+}
+@media(max-width: 420px){
+    .top{
+        grid-template-areas: 
+        "party"
+        "cta1"
+        "cta2";
+    }
 }
