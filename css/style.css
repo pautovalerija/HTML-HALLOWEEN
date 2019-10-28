@@ -55,6 +55,14 @@ body{
 .cta2{
     grid-area: cta2;
 }
+.menu ul {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.menu a{
+    background-color: var(--yellow);
+}
 @media(max-width: 1000px){
     .top{
         grid-template-areas: 
